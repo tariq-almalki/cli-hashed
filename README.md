@@ -1,1 +1,1 @@
-# Hashing Function through CLI
+# Hashing Functions through CLI
