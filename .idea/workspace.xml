@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e64db66-8cb7-4404-b214-57d0e06de240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-to-hash/empty.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files-to-hash/empty.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files-to-hash/empty.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commons-codec.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hashing-functions/hashing_functions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/password4J.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-to-hash/empty.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TypeFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TypeFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TypeText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TypeText.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +50,10 @@
   }
 }</component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="cli-hashed" />
+      <option name="PROGRAM_PARAMETERS" value="file ./files-to-hash/empty.pdf ./files-to-hash/empty.png -a sha3-512" />
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
         <option name="region" />
@@ -76,7 +76,6 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
@@ -94,7 +93,7 @@
       <workItem from="1660799243889" duration="3663000" />
       <workItem from="1660885545704" duration="774000" />
       <workItem from="1660887264547" duration="14863000" />
-      <workItem from="1660913196655" duration="734000" />
+      <workItem from="1660913196655" duration="3492000" />
     </task>
     <servers />
   </component>

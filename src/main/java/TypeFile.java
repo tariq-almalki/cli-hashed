@@ -5,20 +5,25 @@ import picocli.CommandLine.Parameters;
 import picocli.CommandLine.Option;
 
 import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 @Command(name = "file", description = "hashing files with various algorithms")
 public class TypeFile implements Callable<Integer> {
 
-    @Parameters(paramLabel = "FILE", index = "0", arity = "1", description = "file to be hashed")
-    private File file;
+    @Parameters(paramLabel = "FILE", index = "0", arity = "1..*", description = "file/s to be hashed")
+    private File[] files;
 
     @Option(names = {"-a", "--algorithm"}, arity = "0..1", description = "SHA-1\n" +
             "SHA-256\n" +
@@ -32,9 +37,20 @@ public class TypeFile implements Callable<Integer> {
             "SHA3-512\n")
     String algorithm = "SHA1-256";
 
+    int counter;
+
     @Override
     public Integer call() throws Exception {
-        byte[] bytes = Files.readAllBytes(file.toPath());
+
+
+        Map<File, Object> mapOfFilesToTheirBytes = Arrays.stream(files).collect(Collectors.toMap(Function.identity(), file -> {
+            try {
+                return Files.readAllBytes(file.toPath());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }));
+
 
         //noinspection DuplicatedCode
         Path path = Paths.get("./hashing-functions/hashing_functions.txt");
@@ -46,13 +62,23 @@ public class TypeFile implements Callable<Integer> {
                 .collect(Collectors.toMap(str -> str.split(",\\s+")[1].toLowerCase(), str -> str.split(",\\s+")[0]));
 
 
-        String hashed = (String) DigestUtils
-                .class
-                // we pass "String.class" to "getMethod" so it knows beforehand parameter's type that will be used for invoking
-                // the method.
-                .getMethod(hashingFunctions.get(algorithm.toLowerCase()), byte[].class).invoke(null, bytes);
+        mapOfFilesToTheirBytes.forEach((file, object) -> {
+            try {
 
-        System.out.printf("message digest: %s%n", hashed);
+                String hashed = (String) DigestUtils
+                        .class
+                        // we pass "String.class" to "getMethod" so it knows beforehand parameter's type that will be used for invoking
+                        // the method.
+                        .getMethod(hashingFunctions.get(algorithm.toLowerCase()), byte[].class).invoke(null, object);
+
+                System.out.printf("file(%d) message digest: %s%n", ++counter, hashed);
+
+            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
+
 
         return 0;
     }
