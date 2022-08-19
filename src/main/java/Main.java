@@ -1,13 +1,15 @@
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
-@Command(name = "Hash",
+@Command(name = "hash",
         version = "1.0.0",
         mixinStandardHelpOptions = true,
         subcommands = {TypeText.class, TypeFile.class, CommandLine.HelpCommand.class},
         description = "hash texts and file with ease.",
         sortOptions = false,
-        showDefaultValues = true)
+        showDefaultValues = true,
+        showEndOfOptionsDelimiterInUsageHelp = true)
+
 
 public class Main {
 
@@ -18,4 +20,5 @@ public class Main {
 
         System.exit(exitCode);
     }
+
 }

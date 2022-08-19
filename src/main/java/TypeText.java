@@ -13,15 +13,15 @@ import java.util.stream.Collectors;
 import org.apache.commons.codec.digest.DigestUtils;
 
 
-@Command(name = "text", description = "hashing texts with various algorithms")
+@Command(name = "text", version = "1.0.0", description = "hashing texts with various algorithms")
 public class TypeText implements Callable<Integer> {
 
 
-    @Parameters(paramLabel = "STR", index = "0", arity = "0..1", description = "string to be hashed")
+    @Parameters(paramLabel = "STR", index = "0", arity = "1", description = "string to be hashed")
     private String str;
 
     @SuppressWarnings("FieldMayBeFinal")
-    @Option(names = {"-a", "--algorithm"}, arity = "0..1", description = "SHA-1\n" +
+    @Option(names = {"-a", "--algorithm"}, arity = "0..1", defaultValue = "SHA-256", description = "SHA-1\n" +
             "SHA-256\n" +
             "SHA-384\n" +
             "SHA-512\n" +
@@ -30,8 +30,9 @@ public class TypeText implements Callable<Integer> {
             "SHA3-224\n" +
             "SHA3-256\n" +
             "SHA3-384\n" +
-            "SHA3-512\n")
-    private String algorithm = "SHA-256";
+            "SHA3-512\n" +
+            "default value is: ${DEFAULT-VALUE}")
+    private String algorithm;
 
 
     @Override
@@ -52,6 +53,8 @@ public class TypeText implements Callable<Integer> {
                 // we pass "String.class" to "getMethod" so it knows beforehand parameter's type that will be used for invoking
                 // the method.
                 .getMethod(hashingFunctions.get(algorithm.toLowerCase()), String.class)
+                // we pass "null" in place of a reference because the method we're invoking is static method.
+                // this is stated in docs of the method.
                 .invoke(null, str);
 
         System.out.printf("message digest: %s%n", hashed);

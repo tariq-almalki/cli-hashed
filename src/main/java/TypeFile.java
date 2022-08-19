@@ -16,16 +16,15 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 
-@Command(name = "file", description = "hashing files with various algorithms")
+@Command(name = "file", version = "1.0.0", description = "hashing files with various algorithms")
 public class TypeFile implements Callable<Integer> {
 
     @Parameters(paramLabel = "FILE", index = "0", arity = "1..*", description = "file/s to be hashed")
     private File[] files;
 
-    @Option(names = {"-a", "--algorithm"}, arity = "0..1", description = "SHA-1\n" +
+    @Option(names = {"-a", "--algorithm"}, arity = "0..1", defaultValue = "SHA-256", description = "SHA-1\n" +
             "SHA-256\n" +
             "SHA-384\n" +
             "SHA-512\n" +
@@ -34,8 +33,9 @@ public class TypeFile implements Callable<Integer> {
             "SHA3-224\n" +
             "SHA3-256\n" +
             "SHA3-384\n" +
-            "SHA3-512\n")
-    String algorithm = "SHA1-256";
+            "SHA3-512\n" +
+            "default value is: ${DEFAULT-VALUE}")
+    String algorithm;
 
     int counter;
 
@@ -69,7 +69,10 @@ public class TypeFile implements Callable<Integer> {
                         .class
                         // we pass "String.class" to "getMethod" so it knows beforehand parameter's type that will be used for invoking
                         // the method.
-                        .getMethod(hashingFunctions.get(algorithm.toLowerCase()), byte[].class).invoke(null, object);
+                        .getMethod(hashingFunctions.get(algorithm.toLowerCase()), byte[].class)
+                        // we pass "null" in place of a reference because the method we're invoking is static method.
+                        // this is stated in docs of the method.
+                        .invoke(null, object);
 
                 System.out.printf("file(%d) message digest: %s%n", ++counter, hashed);
 
