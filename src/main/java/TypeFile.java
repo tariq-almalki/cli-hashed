@@ -1,4 +1,3 @@
-import com.password4j.Password;
 import org.apache.commons.codec.digest.DigestUtils;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
