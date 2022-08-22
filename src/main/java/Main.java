@@ -9,9 +9,10 @@ import picocli.CommandLine.Command;
         sortOptions = false,
         showDefaultValues = true)
 
-public class Main {
+public class Main implements Runnable {
 
     public static void main(String[] args) {
+
         int exitCode = new CommandLine(new Main())
                 .setUsageHelpLongOptionsMaxWidth(30)
                 .execute(args);
@@ -19,4 +20,8 @@ public class Main {
         System.exit(exitCode);
     }
 
+    @Override
+    public void run() {
+        new CommandLine(new Main()).usage(System.out);
+    }
 }
