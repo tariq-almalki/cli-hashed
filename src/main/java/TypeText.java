@@ -31,15 +31,16 @@ public class TypeText implements Callable<Integer> {
             "SHA3-256\n" +
             "SHA3-384\n" +
             "SHA3-512\n" +
-            "default value is: ${DEFAULT-VALUE}")
+            "(default: ${DEFAULT-VALUE})")
     private String algorithm;
 
 
     @Override
     public Integer call() throws Exception {
 
+        // 1- environment variable
         //noinspection DuplicatedCode
-        Path path = Paths.get("./hashing-functions/hashing_functions.txt");
+        Path path = Paths.get(System.getenv("HASHING_FUNCTIONS"));
 
         List<String> listOfHashingFunctions = Files.readAllLines(path);
 

@@ -52,7 +52,7 @@ public class TypeFile implements Callable<Integer> {
 
 
         //noinspection DuplicatedCode
-        Path path = Paths.get("./hashing-functions/hashing_functions.txt");
+        Path path = Paths.get(System.getenv("HASHING_FUNCTIONS"));
 
         List<String> listOfHashingFunctions = Files.readAllLines(path);
 
