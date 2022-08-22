@@ -38,7 +38,6 @@ public class TypeText implements Callable<Integer> {
     @Override
     public Integer call() throws Exception {
 
-        // 1- environment variable
         //noinspection DuplicatedCode
         Path path = Paths.get(System.getenv("HASHING_FUNCTIONS"));
 

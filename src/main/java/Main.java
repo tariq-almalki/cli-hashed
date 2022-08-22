@@ -7,9 +7,7 @@ import picocli.CommandLine.Command;
         subcommands = {TypeText.class, TypeFile.class, CommandLine.HelpCommand.class},
         description = "hash texts and file with ease.",
         sortOptions = false,
-        showDefaultValues = true,
-        showEndOfOptionsDelimiterInUsageHelp = true)
-
+        showDefaultValues = true)
 
 public class Main {
 

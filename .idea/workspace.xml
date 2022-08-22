@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e64db66-8cb7-4404-b214-57d0e06de240" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TypeFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TypeFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TypeText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TypeText.java" afterDir="false" />
     </list>
@@ -48,11 +49,16 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="cli-hashed" />
-      <option name="PROGRAM_PARAMETERS" value="text &quot;tarsa&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="help" />
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
         <option name="credential" />
         <option name="region" />
@@ -95,12 +101,17 @@
       <workItem from="1660913196655" duration="8429000" />
       <workItem from="1660924621440" duration="2426000" />
       <workItem from="1660928117243" duration="9996000" />
-      <workItem from="1661154823303" duration="1241000" />
+      <workItem from="1661154823303" duration="1876000" />
+      <workItem from="1661157612717" duration="2381000" />
+      <workItem from="1661166974741" duration="3282000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -46,7 +46,10 @@ public class TypeFile implements Callable<Integer> {
             try {
                 return Files.readAllBytes(file.toPath());
             } catch (IOException e) {
-                throw new RuntimeException(e);
+
+                Error rE = new Error("file/s path or name is incorrect.");
+                rE.setStackTrace(new StackTraceElement[0]);
+                throw rE;
             }
         }));
 
