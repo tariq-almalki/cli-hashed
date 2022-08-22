@@ -7,8 +7,8 @@
 </p>
 
 ## Contents
-- Motivation 
-- Introduction  
+- Introduction
+- Features
 - installation 
-- Features 
+- Motivation 
 - Conclusion
