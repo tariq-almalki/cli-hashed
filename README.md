@@ -101,7 +101,7 @@ steps for installing
 
 ## Example
 
-*examples pictures are taken from a run of the program on windows machine program*
+*examples pictures are taken from a run of the program on windows machine*
 
 help message:
 ![help-message](./misc/README-images/help_message.png)
