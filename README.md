@@ -10,7 +10,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation) 
-- [Example](example) 
+- [Example](#example) 
 - [Motivation](#motivation)
 
 
