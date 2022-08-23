@@ -10,8 +10,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation) 
-- [Motivation](#motivation) 
-- [Conclusion](#conclusion)
+- [Motivation](#motivation)
 
 
 ## Introduction
@@ -67,6 +66,7 @@ steps for installing:
 
 **Installed and tested in WSL2(Windows Subsystem of Linux 2), ubuntu distribution**
 
+*prerequisites*
 
 the only prerequisite is having installation of JDK 17 or higher.
 
@@ -100,7 +100,9 @@ steps for installing
 
 ## Motivation
 
-## Conclusion
+It was such a great experience, I Learned a lot, dealing only with the command-line, it exposed me to different perspectives in Windows and Linux command prompt and bash shell.
+
+I used `picocli` to build this TUI app, it was seamless and pleasant experience, documentation of `picocli` was clear and there was a lot of supportive examples.
 
 
 
