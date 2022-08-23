@@ -30,6 +30,7 @@
                 <artifactId>appassembler-maven-plugin</artifactId>
                 <version>1.10</version>
                 <configuration>
+                    <assembleDirectory>${project.build.directory}/cli-hashed</assembleDirectory>
                     <programs>
                         <program>
                             <mainClass>Main</mainClass>
