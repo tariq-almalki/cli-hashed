@@ -46,7 +46,9 @@ supported hashing functions are the following:
     
 the only prerequisite is having installation of JDK 17 or higher.
 
-steps:
+the command called: `hash`
+
+steps for installing:
 1. go to `Releases` and scroll down to the `Assets` section
 2. download `cli-hashed.zip`
 3. unzip `cli-hashed.zip` folder, cd to cli-hashed folder, you will find 2 folders `bin` and `repo` and 1 text file called `hashing_functions.txt` 
@@ -56,14 +58,45 @@ steps:
 **NOTES**
 - to be able to call `hash.bat` from any directory, you need to add it into your `PATH` system or user environment variables.
 - it is not mandatory to call `hash.bat` with extension you can call it like this `hash`
-- type `hash` and press Enter for help 
+- type `hash` in your command-line and press Enter for help 
 - in `repo` there you will find the dependencies for the program
 - in `bin` you will find the launcher scripts `hash.bat` and `hash-linux` for windows and linux respectively
 - the directory of launcher scripts is `bin`, launcher scripts are `hash.bat` and `hash-linux`
 
 ### linux:
 
+**Installed and tested in WSL2(Windows Subsystem of Linux 2), ubuntu distribution**
 
+
+the only prerequisite is having installation of JDK 17 or higher.
+
+the command called: `hash-linux`
+
+steps for installing JDK 17
+1. `apt update && apt upgrade`
+2. `apt install openjdk-17-jdk openjdk-17-jre`
+3. Once installed, verify the Java version using the following command: `java -version`
+4. installation folder is located at `/usr/lib/jvm/java-17-openjdk-amd64`
+5. you need to create `JAVA_HOME` environment variable and export it, to do so<br>paste this command `export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"` in `.bashrc` located in `/$HOME/.bashrc`
+
+
+steps for installing 
+
+1. go to `Releases` and scroll down to the `Assets` section
+2. download `cli-hashed.zip`
+3. unzip `cli-hashed.zip` folder in `/$HOME/`
+4. take the generated `cli-hashed` folder and place it in `/$HOME/.local/bin/`
+5. as in installation of JDK 17 you need to paste this command `export HASHING_FUNCTIONS="/$HOME/.local/cli-hashed/hashing_functions.txt"` in `.bashrc` located in `/$HOME/.bashrc`
+6. to be able to call the command `hash-linux` from anywhere you need to paste these two commands<br> `CLI_HASHED="/home/kiemkist/.local/cli-hashed"
+ `<br>` PATH="$PATH:$CLI_HASHED/bin"`<br> in `.bashrc` located in `/$HOME/.bashrc`
+
+
+**NOTES**
+- I recommend that you arrange the commands in `.bashrc` in a proper way so it can be easy on you if you wanted to make any changes
+- type `hash-linux` in your command-line and press Enter for help
+- in `repo` there you will find the dependencies for the program
+- in `bin` you will find the launcher scripts `hash.bat` and `hash-linux` for windows and linux respectively
+- the directory of launcher scripts is `bin`, launcher scripts are `hash.bat` and `hash-linux`
 
 ## Motivation
 
