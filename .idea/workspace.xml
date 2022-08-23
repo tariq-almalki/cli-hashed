@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e64db66-8cb7-4404-b214-57d0e06de240" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/misc/README-images/hashing_file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/README-images/hashing_multiple_files.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/README-images/hashing_text.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/misc/README-images/help_message.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +110,7 @@
       <workItem from="1661166974741" duration="12006000" />
       <workItem from="1661227285250" duration="6930000" />
       <workItem from="1661243226798" duration="629000" />
-      <workItem from="1661243876017" duration="14871000" />
+      <workItem from="1661243876017" duration="16790000" />
     </task>
     <servers />
   </component>

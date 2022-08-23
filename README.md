@@ -10,6 +10,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation) 
+- [Example](example) 
 - [Motivation](#motivation)
 
 
@@ -97,6 +98,22 @@ steps for installing
 - in `repo` there you will find the dependencies for the program
 - in `bin` you will find the launcher scripts `hash.bat` and `hash-linux` for windows and linux respectively
 - the directory of launcher scripts is `bin`, launcher scripts are `hash.bat` and `hash-linux`
+
+## Example
+
+*examples pictures are taken from a run of the program on windows machine program*
+
+help message:
+![help-message](./misc/README-images/help_message.png)
+
+hashing text:
+![hashing-text](./misc/README-images/hashing_text.png)
+
+hashing file:
+![hashing-file](./misc/README-images/hashing_file.png)
+
+hashing multiple files:
+![hashing-multiple-files](./misc/README-images/hashing_multiple_files.png)
 
 ## Motivation
 
