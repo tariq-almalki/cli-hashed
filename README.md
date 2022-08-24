@@ -117,8 +117,11 @@ hashing multiple files:
 ![hashing-multiple-files](./misc/README-images/hashing_multiple_files.png)
 
 ## Motivation
+I was aiming to solidify my understanding of building an app that is designated for the command line, using `picocli` library eased the process for me, it abstracted a lot of layers to help me focus on the important things, I learned things about java like system properties, calling methods dynamically using `.class`(it is just and object representing the class at runtime).
 
-It was such a great experience, I Learned a lot, dealing only with the command-line, it exposed me to different perspectives in Windows and Linux command prompt and bash shell.
+I ventured to git realm and discovered git tags, git Releases. I used semantic versioning specification to version my program, semantic versioning can be used to standardize the process of versioning of your software, I also Learned about one of the ways to package your software using launcher scripts, I used Maven `appassembler` plugin to achieve that.
+
+It was such a great experience, I Learned a lot, dealing only with the command-line, it exposed me to different perspectives of Windows powershell and Linux bash shell.
 
 I used `picocli` to build this TUI app, it was seamless and pleasant experience, documentation of `picocli` was clear and there was a lot of supportive examples.
 
