@@ -10,7 +10,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation) 
-- [Example](#example) 
+- [Example](#examples) 
 - [Motivation](#motivation)
 
 
@@ -99,7 +99,7 @@ steps for installing
 - in `bin` you will find the launcher scripts `hash.bat` and `hash-linux` for windows and linux respectively
 - the directory of launcher scripts is `bin`, launcher scripts are `hash.bat` and `hash-linux`
 
-## Example
+## Examples
 
 *examples pictures are taken from a run of the program on windows machine*
 
