@@ -74,8 +74,8 @@ the only prerequisite is having installation of JDK 17 or higher.
 the command called: `hash-linux`
 
 steps for installing JDK 17
-1. `apt update && apt upgrade`
-2. `apt install openjdk-17-jdk openjdk-17-jre`
+1. `sudo apt update && sudo apt upgrade`
+2. `sudo apt install openjdk-17-jdk openjdk-17-jre`
 3. Once installed, verify the Java version using the following command: `java -version`
 4. installation folder is located at `/usr/lib/jvm/java-17-openjdk-amd64`
 5. you need to create `JAVA_HOME` environment variable and export it, to do so<br>paste this command `export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"` in `.bashrc` located in `/$HOME/.bashrc`
@@ -87,8 +87,9 @@ steps for installing
 2. download `cli-hashed.zip`
 3. unzip `cli-hashed.zip` folder in `/$HOME/`
 4. take the generated `cli-hashed` folder and place it in `/$HOME/.local/bin/`
-5. as in installation of JDK 17 you need to paste this command `export HASHING_FUNCTIONS="/$HOME/.local/cli-hashed/hashing_functions.txt"` in `.bashrc` located in `/$HOME/.bashrc`
-6. to be able to call the command `hash-linux` from anywhere you need to paste these two commands<br> `CLI_HASHED="/home/kiemkist/.local/cli-hashed"
+5. cd into `cli-hashed`, you need to make the launcher script as executable using this command `sudo chmod 755 hash-linux`
+6. as in installation of JDK 17 you need to paste this command `export HASHING_FUNCTIONS="/$HOME/.local/cli-hashed/hashing_functions.txt"` in `.bashrc` located in `/$HOME/.bashrc`
+7. to be able to call the command `hash-linux` from anywhere you need to paste these two commands<br> `CLI_HASHED="/home/kiemkist/.local/cli-hashed"
  `<br>` PATH="$PATH:$CLI_HASHED/bin"`<br> in `.bashrc` located in `/$HOME/.bashrc`
 
 
